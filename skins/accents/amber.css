@@ -1,0 +1,15 @@
+/*
+ * Modern UI Gray. OTOBO writes the stock palette on body, so these tokens
+ * win there. Screen layout stays in the shared files.
+ */
+
+@media screen, projection, tv, handheld {
+  body {
+    --colMainDark: #3d4451 !important;
+    --colMainLight: #4e5666 !important;
+    --colMainHover: #323844 !important;
+    --colTextLink: #3d4451 !important;
+    --colNotifyOK: #eceef1 !important;
+    --colShadowDark: rgba(61, 68, 81, 0.16) !important;
+  }
+}

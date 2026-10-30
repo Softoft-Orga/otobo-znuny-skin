@@ -1,0 +1,145 @@
+# OTOBO 11.1.1 for skin work. Same services as otobo-docker rel-11_1_1
+# (docker-compose/otobo-base.yml + otobo-override-http.yml).
+# HTTP only, bound to localhost so it can run next to other OTOBO stacks.
+#
+# https://doc.otobo.org/manual/installation/11.1/en/content/installation/installation-docker.html
+
+name: otobo-znuny-skin
+
+services:
+  db:
+    image: mariadb:lts-noble
+    user: mysql:mysql
+    cap_drop:
+      - ALL
+    cap_add:
+      - CAP_SYS_CHROOT
+    restart: unless-stopped
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${OTOBO_DB_ROOT_PASSWORD:?set OTOBO_DB_ROOT_PASSWORD in .env}
+      MARIADB_AUTO_UPGRADE: "1"
+    command:
+      - --max-allowed-packet=136314880
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb-log-file-size=268435456
+      - --query-cache-size=${OTOBO_DB_QUERY_CACHE_SIZE:-33554432}
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  elastic:
+    image: rotheross/otobo-elasticsearch:rel-11_1_1
+    cap_drop:
+      - ALL
+    cap_add:
+      - CAP_SYS_CHROOT
+      - CAP_SETUID
+      - CAP_SETGID
+    restart: unless-stopped
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: ${OTOBO_ELASTICSEARCH_ES_JAVA_OPTS:--Xms512m -Xmx512m}
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl --silent --fail 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s' || exit 1",
+        ]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 60s
+
+  # Bind mounts make /opt/otobo look non-empty, so the image skips its
+  # first copy. This one-shot copies the application when Config.pm is missing.
+  prepare:
+    image: rotheross/otobo:rel-11_1_1
+    user: "0:0"
+    restart: "no"
+    volumes:
+      - opt_otobo:/opt/otobo
+    entrypoint: ["bash", "-lc"]
+    command:
+      - "chown otobo:otobo /opt/otobo; if [ ! -f /opt/otobo/Kernel/Config.pm ]; then su -s /bin/bash otobo -c '/opt/otobo_install/entrypoint.sh copy_otobo_next'; fi"
+
+  web:
+    image: rotheross/otobo:rel-11_1_1
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      elastic:
+        condition: service_healthy
+      prepare:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:${OTOBO_WEB_HTTP_PORT:-8111}:5000"
+    command: ["web", "${OTOBO_WEB_OPTION:-deployment}"]
+    volumes:
+      - opt_otobo:/opt/otobo
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/lab
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-indigo
+      - ./skins/accents/indigo.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-indigo/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-teal
+      - ./skins/accents/teal.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-teal/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-amber
+      - ./skins/accents/amber.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-amber/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-crimson
+      - ./skins/accents/crimson.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-crimson/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab/js/Core.Agent.TicketZoom.Lab.js:/opt/otobo/var/httpd/htdocs/js/Core.Agent.TicketZoom.Lab.js
+      - ./otobo/SkinLab.xml:/opt/otobo/Kernel/Config/Files/XML/ZZZSkinLab.xml:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s -f http://localhost:5000/health | grep -q . || exit 1",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 90s
+
+  daemon:
+    image: rotheross/otobo:rel-11_1_1
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    command: ["daemon"]
+    volumes:
+      - opt_otobo:/opt/otobo
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/lab
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-indigo
+      - ./skins/accents/indigo.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-indigo/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-teal
+      - ./skins/accents/teal.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-teal/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-amber
+      - ./skins/accents/amber.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-amber/css/Core.Default.css:ro
+      - ./skins/otobo/lab/Agent/lab:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-crimson
+      - ./skins/accents/crimson.css:/opt/otobo/var/httpd/htdocs/skins/Agent/softoft-crimson/css/Core.Default.css:ro
+      - ./otobo/SkinLab.xml:/opt/otobo/Kernel/Config/Files/XML/ZZZSkinLab.xml:ro
+    healthcheck:
+      test:
+        ["CMD-SHELL", "./bin/otobo.Daemon.pl status | grep 'Daemon running'"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+volumes:
+  mariadb_data:
+  opt_otobo:
+  elasticsearch_data:

@@ -1,0 +1,108 @@
+/*
+ * Large screens. Each dashboard card is named. The same radius and padding
+ * are repeated so one card does not inherit from another.
+ */
+
+@media screen and (min-width: 1200px) {
+  #Dashboard0100-TicketPendingReminder-box,
+  #Dashboard0110-TicketEscalation-box,
+  #Dashboard0120-TicketNew-box,
+  #Dashboard0130-TicketOpen-box,
+  #Dashboard0250-TicketStats-box,
+  #Dashboard0260-TicketCalendar-box,
+  #Dashboard0270-TicketQueueOverview-box,
+  #Dashboard0322-MyLastChangedTickets-box,
+  #Dashboard0405-News-box,
+  .MainBox .WidgetSimple.SettingsWidget {
+    border-radius: 18px;
+    margin: 0 0 24px;
+  }
+
+  #Dashboard0100-TicketPendingReminder-box > .Header,
+  #Dashboard0110-TicketEscalation-box > .Header,
+  #Dashboard0120-TicketNew-box > .Header,
+  #Dashboard0130-TicketOpen-box > .Header,
+  #Dashboard0250-TicketStats-box > .Header,
+  #Dashboard0260-TicketCalendar-box > .Header,
+  #Dashboard0270-TicketQueueOverview-box > .Header,
+  #Dashboard0322-MyLastChangedTickets-box > .Header,
+  #Dashboard0405-News-box > .Header,
+  .MainBox .WidgetSimple.SettingsWidget > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .MainBox .WidgetSimple.SettingsWidget > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 16px;
+    left: 16px;
+  }
+
+  #Dashboard0100-TicketPendingReminder-box > .Content,
+  #Dashboard0110-TicketEscalation-box > .Content,
+  #Dashboard0120-TicketNew-box > .Content,
+  #Dashboard0130-TicketOpen-box > .Content,
+  #Dashboard0250-TicketStats-box > .Content,
+  #Dashboard0260-TicketCalendar-box > .Content,
+  #Dashboard0270-TicketQueueOverview-box > .Content,
+  #Dashboard0322-MyLastChangedTickets-box > .Content,
+  #Dashboard0405-News-box > .Content,
+  .MainBox .WidgetSimple.SettingsWidget > .Content {
+    padding: 18px 20px 20px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #Dashboard0100-TicketPendingReminder-box,
+  #Dashboard0110-TicketEscalation-box,
+  #Dashboard0120-TicketNew-box,
+  #Dashboard0130-TicketOpen-box,
+  #Dashboard0250-TicketStats-box,
+  #Dashboard0260-TicketCalendar-box,
+  #Dashboard0270-TicketQueueOverview-box,
+  #Dashboard0322-MyLastChangedTickets-box,
+  #Dashboard0405-News-box,
+  .MainBox .WidgetSimple.SettingsWidget {
+    border-radius: 22px;
+    margin: 0 0 28px;
+  }
+
+  #Dashboard0100-TicketPendingReminder-box > .Header,
+  #Dashboard0110-TicketEscalation-box > .Header,
+  #Dashboard0120-TicketNew-box > .Header,
+  #Dashboard0130-TicketOpen-box > .Header,
+  #Dashboard0250-TicketStats-box > .Header,
+  #Dashboard0260-TicketCalendar-box > .Header,
+  #Dashboard0270-TicketQueueOverview-box > .Header,
+  #Dashboard0322-MyLastChangedTickets-box > .Header,
+  #Dashboard0405-News-box > .Header,
+  .MainBox .WidgetSimple.SettingsWidget > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  .MainBox .WidgetSimple.SettingsWidget > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 18px;
+    left: 22px;
+  }
+
+  #Dashboard0100-TicketPendingReminder-box > .Content,
+  #Dashboard0110-TicketEscalation-box > .Content,
+  #Dashboard0120-TicketNew-box > .Content,
+  #Dashboard0130-TicketOpen-box > .Content,
+  #Dashboard0250-TicketStats-box > .Content,
+  #Dashboard0260-TicketCalendar-box > .Content,
+  #Dashboard0270-TicketQueueOverview-box > .Content,
+  #Dashboard0322-MyLastChangedTickets-box > .Content,
+  #Dashboard0405-News-box > .Content,
+  .MainBox .WidgetSimple.SettingsWidget > .Content {
+    padding: 20px 24px 24px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+}

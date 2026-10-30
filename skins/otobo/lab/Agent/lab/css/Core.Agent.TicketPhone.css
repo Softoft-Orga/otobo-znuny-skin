@@ -1,0 +1,448 @@
+/*
+ * AgentTicketPhone. Reset, then style.
+ *
+ * A shadow root is not possible here: OTOBO's scripts look up #FromCustomer,
+ * #Dest, #RichText and #submitRichText on the document. So the form is reset
+ * in place instead. "all: revert" drops every stock OTOBO rule inside the
+ * form and leaves browser defaults. The rules after it are the only design.
+ *
+ * Every selector starts with "#AppWrapper #NewPhoneTicket" (two ids). No
+ * stock rule on this form uses two ids, so stock CSS cannot win again.
+ *
+ * Left out of the reset, because their scripts depend on stock CSS:
+ * CKEditor (.ck), the dropdown widget (.InputField_Container), the attachment
+ * list and drop zone internals, the date picker, and icon fonts.
+ */
+
+@media screen and (min-width: 1200px) {
+  #AppWrapper #NewPhoneTicket :where(:not(
+    .ck, .ck *,
+    .InputField_Container *,
+    .AttachmentListContainer, .AttachmentListContainer *,
+    .DnDUpload *,
+    .ui-datepicker, .ui-datepicker *,
+    .fa, [class^="ooofo"], [class*=" ooofo"],
+    option
+  )) {
+    all: revert;
+  }
+
+  #AppWrapper #NewPhoneTicket .Hidden,
+  #AppWrapper #NewPhoneTicket .TooltipErrorMessage,
+  #AppWrapper #NewPhoneTicket .CKEditor_resizeHandle {
+    display: none;
+  }
+
+  /* Page: title, then form and customer card side by side, full width. */
+
+  #AppWrapper .MainBox.FormScreen > h1 {
+    margin: 0 0 18px;
+    padding: 0;
+    width: auto;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--colTextDark);
+  }
+
+  #AppWrapper .MainBox.FormScreen > .LayoutFixedSidebar.SidebarLast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  #AppWrapper .MainBox.FormScreen > .LayoutFixedSidebar.SidebarLast > .ContentColumn {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    float: none;
+  }
+
+  #AppWrapper .MainBox.FormScreen > .LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    margin: 0;
+    float: none;
+  }
+
+  /* Form card. Fields sit on a 12-column grid. */
+
+  #AppWrapper #NewPhoneTicket {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 28px 32px 32px;
+    background-color: #ffffff;
+    border: 1px solid #e4e6ef;
+    border-radius: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: var(--colTextDark);
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    column-gap: 20px;
+    row-gap: 22px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row {
+    grid-column: span 12;
+    min-width: 0;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(> div.FieldCell > div.Field.Hidden) {
+    display: none;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#FromCustomer) {
+    grid-column: span 6;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#CustomerTicketText) {
+    grid-column: span 6;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#Dest) {
+    grid-column: span 3;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#NewUserID) {
+    grid-column: span 3;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#Subject) {
+    grid-column: span 9;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#OptionCustomer) {
+    grid-column: span 3;
+    align-self: end;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#RichTextField) {
+    grid-column: span 8;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(.AttachmentField) {
+    grid-column: span 4;
+    align-self: stretch;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#NextStateID) {
+    grid-column: span 4;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(.PendingDateField) {
+    grid-column: span 12;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#PriorityID) {
+    grid-column: span 4;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#TimeUnits) {
+    grid-column: span 4;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row:has(#submitRichText) {
+    grid-column: span 12;
+    padding-top: 22px;
+    border-top: 1px solid #eceef4;
+  }
+
+  /* One field: label above, control below. */
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row > div.FieldCell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row > div.FieldCell > label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--colTextDark);
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row > div.FieldCell > label .Marker {
+    margin-right: 3px;
+    color: #c8102e;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm > div.Row > div.FieldCell > div.Field {
+    position: relative;
+    display: block;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Text inputs. */
+
+  #AppWrapper #NewPhoneTicket #FromCustomer,
+  #AppWrapper #NewPhoneTicket #Subject,
+  #AppWrapper #NewPhoneTicket #TimeUnits,
+  #AppWrapper #NewPhoneTicket #CustomerTicketText {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0 14px;
+    background-color: #ffffff;
+    border: 1px solid #d9dbe6;
+    border-radius: 12px;
+    font: inherit;
+    font-size: 14px;
+    color: var(--colTextDark);
+    outline: none;
+  }
+
+  #AppWrapper #NewPhoneTicket #FromCustomer:focus,
+  #AppWrapper #NewPhoneTicket #Subject:focus,
+  #AppWrapper #NewPhoneTicket #TimeUnits:focus {
+    border-color: var(--colMainLight);
+    box-shadow: 0 0 0 3px rgba(0, 0, 153, 0.12);
+  }
+
+  #AppWrapper #NewPhoneTicket #FromCustomer.Error,
+  #AppWrapper #NewPhoneTicket #Subject.Error,
+  #AppWrapper #NewPhoneTicket #TimeUnits.Error,
+  #AppWrapper #NewPhoneTicket #FromCustomer.ServerError,
+  #AppWrapper #NewPhoneTicket #Subject.ServerError {
+    border-color: #c8102e;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.12);
+  }
+
+  /* Dropdown widgets. Inside stays stock; the outer box is ours. */
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+  }
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_InputContainer {
+    display: block;
+    width: 100%;
+  }
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_Search {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    height: 44px;
+    padding: 0 14px;
+    background-color: #ffffff;
+    border: 1px solid #d9dbe6;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_Search:focus {
+    border-color: var(--colMainLight);
+    box-shadow: 0 0 0 3px rgba(0, 0, 153, 0.12);
+  }
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_Search[readonly] {
+    background-color: #f3f4f8;
+  }
+
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_Selection {
+    top: 50%;
+    left: 10px;
+    height: auto;
+    line-height: 20px;
+    transform: translateY(-50%);
+  }
+
+  #AppWrapper #NewPhoneTicket #NextStateID_Search ~ .InputField_Selection .Text,
+  #AppWrapper #NewPhoneTicket #PriorityID_Search ~ .InputField_Selection .Text,
+  #AppWrapper #NewPhoneTicket .Field > .InputField_Container .InputField_Selection .Text {
+    box-sizing: border-box;
+    height: 32px;
+    padding: 6px 14px;
+    background-color: #eef0fb;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--colTextDark);
+  }
+
+  #AppWrapper #NewPhoneTicket #OwnerSelectionGetAll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--colTextLight);
+    text-decoration: none;
+  }
+
+  #AppWrapper #NewPhoneTicket #OwnerSelectionGetAll span {
+    display: none;
+  }
+
+  #AppWrapper #NewPhoneTicket #OptionCustomer {
+    display: inline-block;
+    padding: 12px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--colMainLight);
+    text-decoration: none;
+  }
+
+  /* Message body. */
+
+  #AppWrapper #NewPhoneTicket #RichTextField .ck.ck-editor {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  #AppWrapper #NewPhoneTicket #RichTextField .ck-editor__main {
+    height: auto;
+  }
+
+  #AppWrapper #NewPhoneTicket #RichTextField .ck-editor__editable {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  /* Attachments: the drop zone fills the height beside the editor. */
+
+  #AppWrapper #NewPhoneTicket .Field.AttachmentField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #AppWrapper #NewPhoneTicket .Field.AttachmentField .DnDUpload {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 140px;
+    padding: 20px;
+    background-color: #f8f9fc;
+    border: 2px dashed #d3d6e4;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Pending date row, shown only for pending states. */
+
+  #AppWrapper #NewPhoneTicket .PendingDateField select {
+    height: 36px;
+    margin: 0 6px 0 0;
+    padding: 0 8px;
+    border: 1px solid #d9dbe6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font: inherit;
+  }
+
+  #AppWrapper #NewPhoneTicket .PendingDateField .FieldExplanation {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: var(--colTextLight);
+  }
+
+  /* Submit. */
+
+  #AppWrapper #NewPhoneTicket #submitRichText {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0 28px;
+    height: 46px;
+    background-color: var(--colMainLight);
+    border: 0;
+    border-radius: 12px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  #AppWrapper #NewPhoneTicket #submitRichText:hover {
+    background-color: var(--colMainDark);
+  }
+
+  #AppWrapper #NewPhoneTicket #submitRichText span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Customer card. Its AJAX content keeps stock table styles. */
+
+  #AppWrapper #CustomerInfo {
+    margin: 0;
+    background-color: #ffffff;
+    border: 1px solid #e4e6ef;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+
+  #AppWrapper #CustomerInfo > .Header {
+    padding: 20px 22px 0;
+    border: 0;
+    background: none;
+  }
+
+  #AppWrapper #CustomerInfo > .Header h2 {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--colTextDark);
+  }
+
+  #AppWrapper #CustomerInfo > .Content {
+    padding: 12px 22px 22px;
+    font-size: 13px;
+    color: var(--colTextLight);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #AppWrapper .MainBox.FormScreen > .LayoutFixedSidebar.SidebarLast {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    column-gap: 28px;
+  }
+
+  #AppWrapper #NewPhoneTicket {
+    padding: 32px 36px 36px;
+  }
+
+  #AppWrapper #NewPhoneTicket > fieldset.ModularForm {
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+}

@@ -1,0 +1,449 @@
+/*
+ * AgentTicketZoom. OTOBO loads Core.TicketDetail.css on this screen.
+ * Each rule names one element on the ticket page.
+ */
+
+@media screen and (min-width: 1200px) {
+  .TicketZoom > .Headline {
+    margin: 0 0 12px;
+    padding: 0;
+  }
+
+  .TicketZoom .ContentColumn > .WidgetSimple {
+    margin: 0 0 20px;
+    border-radius: 18px;
+  }
+
+  .TicketZoom .ContentColumn > .WidgetSimple > .Content {
+    padding: 10px 16px;
+    border-radius: 18px;
+  }
+
+  #ArticleTree > .WidgetSimple {
+    margin: 0 0 20px;
+    border-radius: 18px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 16px;
+    left: 16px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Content {
+    padding: 14px 16px 16px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  #ArticleItems .WidgetSimple {
+    margin: 0 0 20px;
+    border-radius: 18px;
+  }
+
+  #ArticleItems .WidgetSimple > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  #ArticleItems .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 16px;
+    left: 16px;
+  }
+
+  #ArticleItems .WidgetSimple > .Content {
+    padding: 16px 18px 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple {
+    margin: 0 0 20px;
+    border-radius: 18px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 16px;
+    left: 16px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Content {
+    padding: 14px 16px 16px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple {
+    margin: 0 0 20px;
+    border-radius: 18px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 16px;
+    left: 16px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Content {
+    padding: 14px 16px 16px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .TicketZoom > .Headline {
+    margin: 0 0 16px;
+    padding: 0;
+  }
+
+  .TicketZoom .ContentColumn > .WidgetSimple {
+    margin: 0 0 24px;
+    border-radius: 22px;
+  }
+
+  .TicketZoom .ContentColumn > .WidgetSimple > .Content {
+    padding: 12px 18px;
+    border-radius: 22px;
+  }
+
+  #ArticleTree > .WidgetSimple {
+    margin: 0 0 24px;
+    border-radius: 22px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 18px;
+    left: 22px;
+  }
+
+  #ArticleTree > .WidgetSimple > .Content {
+    padding: 16px 20px 20px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  #ArticleItems .WidgetSimple {
+    margin: 0 0 24px;
+    border-radius: 22px;
+  }
+
+  #ArticleItems .WidgetSimple > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  #ArticleItems .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 18px;
+    left: 22px;
+  }
+
+  #ArticleItems .WidgetSimple > .Content {
+    padding: 18px 22px 22px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple {
+    margin: 0 0 24px;
+    border-radius: 22px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 18px;
+    left: 22px;
+  }
+
+  .TicketZoom .SidebarColumn > .WidgetSimple > .Content {
+    padding: 16px 20px 20px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple {
+    margin: 0 0 24px;
+    border-radius: 22px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Header .WidgetAction.Toggle i {
+    margin: 0;
+    top: 18px;
+    left: 22px;
+  }
+
+  .TicketZoom #Async_0200-CustomerInformation > .WidgetSimple > .Content {
+    padding: 16px 20px 20px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+}
+
+/*
+ * Article list. Stock paints internal notes pink and the open article gray
+ * with !important, so these backgrounds have to win the same way.
+ */
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  float: none;
+  margin: 0;
+  padding: 2px 0;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li:after {
+  content: none;
+  display: none;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > form {
+  display: inline-flex;
+  margin: 0;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > a,
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > span.ClusterLink,
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > form > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 7px 12px;
+  border: 1px solid #e4e6ef !important;
+  border-radius: 999px;
+  background: #f7f8fa;
+  color: #1a1d2b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > a:hover,
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li:hover > span.ClusterLink,
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > form > a:hover {
+  border-color: var(--colMainLight) !important;
+  background: color-mix(in srgb, var(--colMainLight) 8%, #ffffff);
+  color: var(--colMainDark);
+  text-decoration: none;
+}
+
+.TicketZoom .ContentColumn > .WidgetSimple > .Content > .ActionRow > ul.Actions > li > span.ClusterLink > i {
+  margin: 0;
+  color: #7f809d;
+  font-size: 12px;
+}
+
+.TicketZoom .ActionRow.Cluster > ul.Actions > li > ul {
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 196px;
+  padding: 6px;
+  border: 1px solid #e4e6ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(26, 29, 43, 0.12);
+}
+
+.TicketZoom .ActionRow.Cluster > ul.Actions > li > ul > li {
+  border: 0;
+  border-radius: 8px;
+}
+
+.TicketZoom .ActionRow.Cluster > ul.Actions > li > ul > li > a {
+  padding: 8px 10px !important;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: #1a1d2b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.TicketZoom .ActionRow.Cluster > ul.Actions > li > ul > li > a:hover {
+  border: 0;
+  background: color-mix(in srgb, var(--colMainLight) 10%, #ffffff);
+  color: var(--colMainDark);
+}
+
+.TicketZoom .ActionRow #DestQueueID_Search {
+  width: 112px !important;
+  height: 34px;
+  margin: 0;
+  padding: 0 14px;
+  border: 1px solid #e4e6ef;
+  border-radius: 999px;
+  background: #f7f8fa;
+  color: #1a1d2b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.TicketZoom .ActionRow .InputField_Selection {
+  top: 0 !important;
+  left: 14px !important;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: transparent;
+  color: #1a1d2b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable {
+  width: 100%;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+  font-size: 13px;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > thead {
+  background: none;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > thead > tr > th {
+  padding: 2px 10px 10px;
+  border: 0;
+  border-bottom: 1px solid #e4e6ef;
+  background: none;
+  color: #7f809d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > thead > tr > th a {
+  color: #7f809d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr > td {
+  padding: 10px;
+  border: 0 !important;
+  border-bottom: 1px solid #eef0f4 !important;
+  background: #ffffff !important;
+  color: #1a1d2b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr:last-child > td {
+  border-bottom: 0 !important;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr:hover > td,
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.Active > td {
+  background: color-mix(in srgb, var(--colMainLight) 10%, #ffffff) !important;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.NotVisibleForCustomer > td {
+  background: #ffffff !important;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.NotVisibleForCustomer > td:first-child {
+  box-shadow: inset 3px 0 0 #e7b2aa;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.system > td {
+  background: #ffffff !important;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.system > td:first-child {
+  box-shadow: inset 3px 0 0 #e4d48a;
+}
+
+#ArticleTableBody .Scroller {
+  height: auto !important;
+  max-height: 320px;
+  margin-bottom: 0 !important;
+  border: 0;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.NotVisibleForCustomer.Active > td,
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.NotVisibleForCustomer:hover > td,
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.system.Active > td,
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr.system:hover > td {
+  background: color-mix(in srgb, var(--colMainLight) 10%, #ffffff) !important;
+}
+
+.TicketZoom.UseArticleColors #ArticleTable > tbody > tr > td a {
+  font-weight: 600;
+  color: var(--colTextLink);
+  text-decoration: none;
+}
+
+.TicketZoom.UseArticleColors #ArticleItems .ArticleMailContent .ArticleBody,
+.TicketZoom.UseArticleColors #ArticleItems .ArticleMailContent iframe,
+.TicketZoom.UseArticleColors #ArticleItems .NotVisibleForCustomer .ArticleMailContent .ArticleBody,
+.TicketZoom.UseArticleColors #ArticleItems .NotVisibleForCustomer .ArticleMailContent iframe,
+.TicketZoom.UseArticleColors #ArticleItems .system .ArticleMailContent .ArticleBody,
+.TicketZoom.UseArticleColors #ArticleItems .system .ArticleMailContent iframe {
+  border: 1px solid #e4e6ef;
+  border-radius: 12px;
+}

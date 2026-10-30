@@ -1,0 +1,329 @@
+/*
+ * Ticket lists: queue, status, escalation, locked, responsible, watch, service.
+ * OTOBO loads this file only on those screens.
+ * The check is tests/e2e/screens/agent-ticket-queue.spec.ts.
+ *
+ * Small (S) is the table. Medium (M) and large (L) are the card lists.
+ * The same card, tab, and table treatment is repeated on each element.
+ */
+
+@media screen and (min-width: 1200px) {
+  .OverviewBox {
+    margin: 16px 24px 0;
+    padding: 0;
+  }
+
+  .OverviewBox > h1 {
+    margin: 0 0 14px;
+    color: #1a1d2b;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .OverviewBox > .WidgetSimple.QueueOverview {
+    margin: 0 0 16px;
+    border: 0;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(26, 29, 43, 0.04);
+  }
+
+  .OverviewBox > .WidgetSimple.QueueOverview > .Content {
+    padding: 4px 18px 0;
+    border-radius: 18px;
+    background-color: #ffffff;
+  }
+
+  .OverviewBox > .QueueOverviewSeparator {
+    display: none;
+    height: 0;
+    min-height: 0;
+    margin: 0;
+  }
+
+  ul.QueueOverviewList.Level_0 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.QueueOverviewList.Level_0 > li {
+    float: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  ul.QueueOverviewList.Level_0 > li > a {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 0 10px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    color: #7f809d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  ul.QueueOverviewList.Level_0 > li > a.Active {
+    border-bottom-color: var(--colMainLight);
+    color: var(--colMainLight);
+    font-weight: 700;
+  }
+
+  #OverviewControl {
+    margin: 0;
+    border-radius: 18px 18px 0 0;
+    background-color: #ffffff;
+  }
+
+  #OverviewControl > div {
+    margin: 0;
+    padding: 8px 16px 4px;
+    border-radius: 18px 18px 0 0;
+    background: #ffffff;
+  }
+
+  #OverviewControl > div > .ControlRow {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    background-image: none;
+    overflow: visible;
+  }
+
+  #OverviewControl > div > .ActionRow {
+    margin: 0;
+    padding: 4px 0 0;
+    background: #ffffff;
+    background-image: none;
+    overflow: visible;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    float: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs > li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs > li > a {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 0 8px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    color: #7f809d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs > li.Active > a {
+    border-bottom-color: var(--colMainLight);
+    background: none;
+    color: var(--colMainLight);
+    font-weight: 700;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs > li > a > span {
+    margin-left: 6px;
+    color: #7f809d;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #OverviewControl > div > .ControlRow > ul.Tabs > li.Active > a > span {
+    color: var(--colMainLight);
+    font-weight: 700;
+  }
+
+  #OverviewControl .OverviewZoom {
+    float: right;
+    margin: 4px 0 0;
+  }
+
+  #OverviewControl .OverviewZoom > li > a {
+    width: 28px;
+    height: 28px;
+    margin: 0 0 0 4px;
+    border: 0;
+    border-radius: 8px;
+    background: #f4f5f8;
+    color: #7f809d;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  #OverviewControl .OverviewZoom > li.Active > a {
+    background: var(--colMainLight);
+    color: #ffffff;
+  }
+
+  #OverviewBody {
+    box-sizing: border-box;
+    margin: 0 24px 24px;
+    padding: 0 8px 12px;
+    border: 0;
+    border-radius: 0 0 18px 18px;
+    background-color: #ffffff;
+    overflow-x: auto;
+  }
+
+  #OverviewBody > form > table.TableSmall {
+    width: max-content;
+    min-width: 100%;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: transparent;
+    font-size: 13px;
+  }
+
+  #OverviewBody > form > table.TableSmall > thead > tr {
+    background: none;
+  }
+
+  #OverviewBody > form > table.TableSmall > thead > tr > th {
+    height: auto;
+    padding: 8px 10px 10px;
+    border: 0;
+    border-bottom: 1px solid #e4e6ef;
+    background: none;
+    color: #7f809d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+  }
+
+  #OverviewBody > form > table.TableSmall > thead > tr > th > a {
+    color: #7f809d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  #OverviewBody > form > table.TableSmall > tbody > tr > td {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid #eef0f4;
+    background-color: transparent;
+    color: #1a1d2b;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  #OverviewBody > form > table.TableSmall > tbody > tr:last-child > td {
+    border-bottom: 0;
+  }
+
+  #OverviewBody > form > table.TableSmall > tbody > tr:hover > td {
+    background-color: color-mix(in srgb, var(--colMainLight) 8%, #ffffff);
+  }
+
+  #OverviewBody > form > table.TableSmall > tbody > tr > td > a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #TicketOverviewMedium,
+  #TicketOverviewLarge {
+    box-sizing: border-box;
+    margin: 0 24px 24px;
+    padding: 4px 16px 16px;
+    border: 0;
+    border-radius: 0 0 18px 18px;
+    background-color: #ffffff;
+    list-style: none;
+    overflow-x: auto;
+  }
+
+  #TicketOverviewMedium > li.MasterAction,
+  #TicketOverviewLarge > li.MasterAction {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border: 1px solid #e4e6ef;
+    border-radius: 12px;
+    background-color: #ffffff;
+  }
+
+  #TicketOverviewMedium > li.MasterAction > .Content > .MasterActionLink,
+  #TicketOverviewLarge > li.MasterAction a.MasterActionLink {
+    color: #1a1d2b;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  #EmptyMessageSmall,
+  #EmptyMessageMedium,
+  #EmptyMessageLarge {
+    margin: 0;
+    padding: 28px 8px;
+    border: 0;
+    background: none;
+    color: #7f809d;
+    font-size: 13px;
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .OverviewBox {
+    margin: 20px 40px 0;
+  }
+
+  .OverviewBox > .WidgetSimple.QueueOverview {
+    border-radius: 22px;
+  }
+
+  .OverviewBox > .WidgetSimple.QueueOverview > .Content {
+    border-radius: 22px;
+  }
+
+  #OverviewControl {
+    border-radius: 22px 22px 0 0;
+  }
+
+  #OverviewControl > div {
+    border-radius: 22px 22px 0 0;
+  }
+
+  #OverviewBody {
+    margin: 0 40px 28px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  #TicketOverviewMedium,
+  #TicketOverviewLarge {
+    margin: 0 40px 28px;
+    border-radius: 0 0 22px 22px;
+  }
+}

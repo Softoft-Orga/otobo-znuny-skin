@@ -1,0 +1,64 @@
+/*
+ * Large screens. Inset the page and the two banners above it.
+ * Below 1200px the stock padding stays, including the off-canvas sidebar.
+ */
+
+@media screen and (min-width: 1200px) {
+  #AppWrapper > .MessageBox.Error {
+    margin: 8px 24px 0;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  #AppWrapper > .MessageBox.Error > p {
+    padding: 10px 16px;
+  }
+
+  #AppWrapper > .MessageBox.Notice {
+    margin: 8px 24px 0;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  #AppWrapper > .MessageBox.Notice > p {
+    padding: 10px 16px;
+  }
+
+  #AppWrapper > .MessageBox + .MainBox,
+  #AppWrapper > .MessageBox + .Hidden + .MainBox {
+    padding-top: 12px;
+  }
+
+  .MainBox {
+    padding: 24px 24px 56px;
+  }
+
+  .MainBox .LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+    margin-left: 28px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #AppWrapper > .MessageBox.Error {
+    margin: 8px 40px 0;
+    border-radius: 16px;
+  }
+
+  #AppWrapper > .MessageBox.Notice {
+    margin: 8px 40px 0;
+    border-radius: 16px;
+  }
+
+  #AppWrapper > .MessageBox + .MainBox,
+  #AppWrapper > .MessageBox + .Hidden + .MainBox {
+    padding-top: 12px;
+  }
+
+  .MainBox {
+    padding: 32px 40px 72px;
+  }
+
+  .MainBox .LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+    margin-left: 36px;
+  }
+}

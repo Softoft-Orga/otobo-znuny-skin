@@ -1,0 +1,41 @@
+/*
+ * Large screens. #Header is a fixed 72px bar and #NavigationContainer is
+ * placed at top: 55px, so the bar has to grow or the labels sit on the
+ * bottom edge and get clipped.
+ *
+ * The nav is not inside #Header. A script writes left: 10px on the element,
+ * which leaves the first label outside the rounded bar. left needs !important
+ * to win over that inline value, and it is measured from the page, so it
+ * includes the header margin.
+ */
+
+@media screen and (min-width: 1200px) {
+  #Header {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    height: 100px;
+    margin: 16px 24px 0;
+    padding: 16px 22px 16px;
+    border-radius: 18px;
+  }
+
+  #NavigationContainer {
+    left: 46px !important;
+    width: calc(100% - 92px);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #Header {
+    width: calc(100% - 80px);
+    height: 108px;
+    margin: 20px 40px 0;
+    padding: 18px 28px;
+    border-radius: 22px;
+  }
+
+  #NavigationContainer {
+    left: 68px !important;
+    width: calc(100% - 136px);
+  }
+}

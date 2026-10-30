@@ -1,0 +1,15 @@
+/*
+ * Modern UI Red. OTOBO writes the stock palette on body, so these tokens
+ * win there. Screen layout stays in the shared files.
+ */
+
+@media screen, projection, tv, handheld {
+  body {
+    --colMainDark: #6e3030 !important;
+    --colMainLight: #8a3d3d !important;
+    --colMainHover: #5c2828 !important;
+    --colTextLink: #8a3d3d !important;
+    --colNotifyOK: #f6ecec !important;
+    --colShadowDark: rgba(110, 48, 48, 0.16) !important;
+  }
+}

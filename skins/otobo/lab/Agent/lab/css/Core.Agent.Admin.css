@@ -1,0 +1,430 @@
+/*
+ * Administration overview. OTOBO loads this file with the Admin module.
+ * Category boxes have no ids, so each one is named with its place in the column.
+ */
+
+@media screen and (min-width: 1200px) {
+  .MainBox.LayoutFixedSidebar.SidebarFirst > .SidebarColumn {
+    margin-right: 12px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3) {
+    margin: 0 0 12px;
+    border-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3)
+    > .Header {
+    padding: 14px 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3)
+    > .Content {
+    padding: 8px 18px 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content
+    > p.FieldExplanation {
+    margin: 0;
+  }
+
+  input#Filter {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 14px !important;
+    border-radius: 14px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    .ActionList
+    > li
+    > a.CallForAction {
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 14px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9) {
+    margin: 0 0 12px;
+    border-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9)
+    > .Header {
+    padding: 16px 20px 8px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9)
+    > .Content {
+    padding: 4px 16px 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    .ItemListGrid.WithIcons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px 0 0;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    .ItemListGrid.WithIcons
+    > li {
+    float: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    .ItemListGrid.WithIcons
+    > li
+    > a.AsBlock {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 60px 16px 18px;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .MainBox.LayoutFixedSidebar.SidebarFirst > .SidebarColumn {
+    margin-right: 16px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3) {
+    margin: 0 0 12px;
+    border-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3)
+    > .Header {
+    padding: 16px 22px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(1)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(3)
+    > .Content {
+    padding: 8px 22px 22px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content
+    > p.FieldExplanation {
+    margin: 0;
+  }
+
+  input#Filter {
+    padding: 12px 16px !important;
+    border-radius: 16px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .SidebarColumn
+    .ActionList
+    > li
+    > a.CallForAction {
+    padding: 14px 18px;
+    border-radius: 16px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8),
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9) {
+    margin: 0 0 12px;
+    border-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8)
+    > .Header,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9)
+    > .Header {
+    padding: 18px 24px 8px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(1)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(2)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(3)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(4)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(5)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(6)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(7)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(8)
+    > .Content,
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    > .WidgetSimple:nth-child(9)
+    > .Content {
+    padding: 4px 20px 22px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    .ItemListGrid.WithIcons {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .MainBox.LayoutFixedSidebar.SidebarFirst
+    > .ContentColumn
+    .ItemListGrid.WithIcons
+    > li
+    > a.AsBlock {
+    padding: 64px 18px 20px;
+    border-radius: 18px;
+  }
+}

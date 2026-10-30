@@ -1,0 +1,22 @@
+/*
+ * Large screens. The footer is one element.
+ */
+
+@media screen and (min-width: 1200px) {
+  #Footer {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    margin: 0 24px 20px;
+    padding: 16px 20px;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #Footer {
+    width: calc(100% - 80px);
+    margin: 0 40px 28px;
+    padding: 18px 24px;
+    border-radius: 18px;
+  }
+}

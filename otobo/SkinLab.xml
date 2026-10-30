@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otobo_config version="2.0" init="Application">
+    <Setting Name="Loader::Agent::Skin###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab skin. CSS is written per screen, on individual elements.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="InternalName">lab</Item>
+                <Item Key="VisibleName" Translatable="1">Lab</Item>
+                <Item Key="Description" Translatable="1">Screen-isolated skin used while developing
+                    customer skins.</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::CommonCSS###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the ticket action dialog. The shell is on the
+            ticket page. The form is in the popup iframe.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Array>
+                <Item>Core.Agent.TicketAction.css</Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketZoom###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab script that opens ticket actions in a dialog on the ticket
+            page.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="JavaScript">
+                    <Array>
+                        <Item>Core.Agent.TicketZoom.Lab.js</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentStatistics###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the statistics view. Pulls the settings fields
+            next to the sidebar cards.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.StatisticsView.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketPhone###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the new phone ticket screen.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketPhone.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketEmail###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the new email ticket screen.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketEmail.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketQueue###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the queue view and the other ticket lists that use the same overview.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketStatusView###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the status view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketEscalationView###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the escalation view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketLockedView###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the locked ticket view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketResponsibleView###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the responsible ticket view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketWatchView###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the watched ticket view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketService###100-lab" Required="0" Valid="1">
+        <Description Translatable="1">Lab CSS for the service view.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketOverview.css</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::Skin###110-softoft-indigo" Required="0" Valid="1">
+        <Description Translatable="1">Modern UI Blue. A calm blue accent on the shared agent layout.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="InternalName">softoft-indigo</Item>
+                <Item Key="VisibleName" Translatable="1">Modern UI Blue</Item>
+                <Item Key="Description" Translatable="1">Same screen layout as the lab skin, with a blue accent.</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::Skin###120-softoft-teal" Required="0" Valid="1">
+        <Description Translatable="1">Modern UI Green. A calm green accent on the shared agent layout.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="InternalName">softoft-teal</Item>
+                <Item Key="VisibleName" Translatable="1">Modern UI Green</Item>
+                <Item Key="Description" Translatable="1">Same screen layout as the lab skin, with a green accent.</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::Skin###130-softoft-amber" Required="0" Valid="1">
+        <Description Translatable="1">Modern UI Gray. A calm gray accent on the shared agent layout.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="InternalName">softoft-amber</Item>
+                <Item Key="VisibleName" Translatable="1">Modern UI Gray</Item>
+                <Item Key="Description" Translatable="1">Same screen layout as the lab skin, with a gray accent.</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::Skin###140-softoft-crimson" Required="0" Valid="1">
+        <Description Translatable="1">Modern UI Red. A calm red accent on the shared agent layout.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="InternalName">softoft-crimson</Item>
+                <Item Key="VisibleName" Translatable="1">Modern UI Red</Item>
+                <Item Key="Description" Translatable="1">Same screen layout as the lab skin, with a red accent.</Item>
+            </Hash>
+        </Value>
+    </Setting>
+</otobo_config>

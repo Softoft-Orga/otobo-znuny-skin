@@ -1,0 +1,8 @@
+/*
+ * Skin "lab". This file loads on every agent screen.
+ * Leave it empty. A rule here matches classes that other screens share,
+ * and one edit can change a screen you are not looking at.
+ *
+ * Add a file whose name matches the screen module, for example
+ * Core.Agent.Dashboard.css. OTOBO loads that file only with that module.
+ */
